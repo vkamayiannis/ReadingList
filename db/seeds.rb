@@ -11,5 +11,6 @@ Book.create!([{title: "Seven Languages in Seven Weeks",
 			   description: "Data is getting bigger and more complex by the day, and so are the choices in handling that data. As a modern application developer you need to understand the emerging field of data management, both RDBMS and NoSQL",
 			   amazon_id: "1934356921",
 			   rating: 3,
-			   finished_on: 10.days.ago}])
+			   finished_on: nil}])
+puts "Created #{Book.count} books"
 
