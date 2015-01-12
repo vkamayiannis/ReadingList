@@ -24,6 +24,10 @@
     <%= f.text_area :description, cols: 80, rows: 10 %>
   </div>
   <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.select :category_id, options_for_select(Category.all.collect{|x| [x.descr, x.id]}, @book.category.id.to_s) %>
+  </div>
+  <div class="field">
     <%= f.label :amazon_id %><br>
     <%= f.text_field :amazon_id %>
   </div>
@@ -31,6 +35,12 @@
     <%= f.label :rating %><br>
     <%= f.select :rating, options_for_select((0..10).map{|x| [x,x]}, @book.rating.to_s) %>
   </div>
+  
+  <div class="field">
+    <%= f.label :finished_on %><br>
+    <%= f.date_field :finished_on %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

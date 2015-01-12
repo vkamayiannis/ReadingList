@@ -8,9 +8,17 @@
 </head>
 <body>
 	<h1 align='center'>Reading List</h1>
-
-	<%= yield %>
-
+	<table>
+		<td class="nav_menu">
+			<ul>
+			  <li><%= link_to 'Books', books_path %></li>
+			  <li><%= link_to 'Categories', categories_path %></li>
+			</ul>
+		</td>
+		<td>
+		  <%= yield %>
+		</td>
+	</table>
 	<h6>Based on Code School's Ruby path screencasts</h6>
 
 </body>
