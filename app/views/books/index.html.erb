@@ -1,7 +1,7 @@
 
 <table>
   <thead>
-    <form>
+    <form method="get">
       <legend>Search</legend>
       <input type = 'text' class='form-control' value='<%= params[:keyword] %>' name='keyword' placeholder='Keyword'>
     </form>
@@ -34,7 +34,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @books %>
 <br>
 
 <%= link_to 'New Book', new_book_path %>
