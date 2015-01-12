@@ -2,18 +2,18 @@ class Book < ActiveRecord::Base
 	
 	scope :finished, -> {where.not(finished_on: nil)}
 	scope :recent, -> {where('finished_on > ?', 2.days.ago)}
-	scope :search, -> (keyword){where(title: keyword) if keyword.present?}
-
-    def finished?
+	#scope :search, -> (keyword){where(title: keyword) if keyword.present?}
+	
+  def finished?
 		finished_on.present?
 	end
 
-	#def self.search(keyword)
-#		if keyword.present?
-			#where(title: keyword)
-		#else
-			#all
-		#end
-	#end
+	def self.search(keyword)
+		if keyword.present?
+			where("title like '%#{keyword}%'")
+		else
+			all
+		end
+	end
 	#51.32
 end

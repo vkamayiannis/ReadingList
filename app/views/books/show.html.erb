@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_from_amazon(@book.amazon_id) %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
@@ -16,9 +20,9 @@
 </p>
 
 <p>
-  <strong>Amazon:</strong>
-  <%= @book.amazon_id %>
+  <strong>Rating:</strong>
+  <%= @book.rating %>/10
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'List', books_path %>
