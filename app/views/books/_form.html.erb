@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.select :category_id, options_for_select(Category.all.collect{|x| [x.descr, x.id]}, @book.category.id.to_s) %>
+    <%= f.collection_select(:category_id, Category.all, :id, :descr) %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %>
+    <%= f.text_field :isbn %>
   </div>
   <div class="field">
     <%= f.label :amazon_id %><br>

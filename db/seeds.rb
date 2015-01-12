@@ -1,3 +1,6 @@
+Category.destroy_all
+categories = Category.create([{descr: "Development"}, {descr: "Databases"}, {descr: "Programming"}])
+puts "Created #{Category.count} categories"
 Book.destroy_all
 Book.create!([{title: "Seven Languages in Seven Weeks", 
 			   author: "Bruce A. Tate",
@@ -5,12 +8,14 @@ Book.create!([{title: "Seven Languages in Seven Weeks",
 			   				 But if one per year is good, how about Seven Languages in Seven Weeks? In this book you'll get a hands-on tour of Clojure, Haskell, Io, Prolog, Scala, Erlang, and Ruby.",
 			   amazon_id: "193435659X",
 			   rating: 5,
-			   finished_on: 2.months.ago},
+			   finished_on: 2.months.ago,
+			   category: categories.first},
 			   {title: "Seven Databases in Seven Weeks", 
 			   author: "Bruce A. Tate",
 			   description: "Data is getting bigger and more complex by the day, and so are the choices in handling that data. As a modern application developer you need to understand the emerging field of data management, both RDBMS and NoSQL",
 			   amazon_id: "1934356921",
 			   rating: 3,
-			   finished_on: nil}])
+			   finished_on: nil,
+			   category: categories.last}])
 puts "Created #{Book.count} books"
 
