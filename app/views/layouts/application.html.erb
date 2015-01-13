@@ -9,29 +9,29 @@
 
 <body>
 	<h1 align='center'>Reading List</h1>
-    <div id="main-container" class="container">
-      <div class="row">
-        <div id="sidebar" class="col-xs-3">
-          <ul>Menu
-			  <li>
-			  	<ul class="main_menu_item">Books
-			  	  <li><%= link_to 'List', books_path %></li>
-			      <li><%= link_to 'New book', new_book_path %></li>
-			    </ul>
-			  </li>
-			  <li>
-			    <ul class="main_menu_item">Categories
-			  	  <li><%= link_to 'List', categories_path %></li>
-			      <li><%= link_to 'New category', new_category_path %></li>
-			    </ul>
-			  </li>
-			</ul>
-        </div>
-        <div id="content" class="col-xs-9">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
-    <h6>Based on Code School's Ruby path screencasts</h6>
-  </body>
+  <div id="main-container" class="container">
+    <div class="row">
+      <div id="sidebar" class="col-xs-2">
+        <ul>Menu
+  			  <li>
+   			  	<ul class="main_menu_item">Books
+   			  	  <li><%= link_to 'List', books_path %></li>
+   			      <li><%= link_to 'New book', new_book_path %></li>
+   			    </ul>
+   			  </li>
+   			  <li>
+   			    <ul class="main_menu_item">Categories
+   			  	  <li><%= link_to 'List', categories_path %></li>
+   			      <li><%= link_to 'New category', new_category_path %></li>
+   			    </ul>
+   			  </li>
+		   </ul>
+       </div>
+         <div id="content" class="col-xs-9">
+           <%= yield %>
+         </div>
+     </div>
+  </div>
+  <h6>Based on Code School's Ruby path screencasts</h6>
+</body>
 </html>

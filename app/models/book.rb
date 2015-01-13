@@ -19,7 +19,6 @@ class Book < ActiveRecord::Base
 		end
 	end
 	def self.filter(category_id)
-	  #where(book.categories: {category_id: category_id}) 
 	  if category_id.present?
 	    where("category_id = ?", category_id)
 	  end

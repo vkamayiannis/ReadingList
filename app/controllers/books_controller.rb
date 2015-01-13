@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     if params[:keyword]
-      @books = Book.search(params[:keyword]).filter(params[:filter]).paginate(:page => params[:page], :per_page => 5)
+      @books = Book.search(params[:keyword]).paginate(:page => params[:page], :per_page => 5)
     elsif params[:filter]
       @books = Book.filter(params[:filter]).paginate(:page => params[:page], :per_page => 5)
     else
