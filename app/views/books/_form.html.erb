@@ -28,7 +28,8 @@
     <%= f.collection_select(:category_id, Category.all, :id, :descr) %>
   </div>
   <div class="field">
-    <%= f.label :isbn %>
+    ISBN
+    <!--<%= f.label :isbn %>-->
     <%= f.text_field :isbn %>
   </div>
   <div class="field">

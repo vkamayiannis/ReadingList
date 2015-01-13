@@ -10,9 +10,19 @@
 	<h1 align='center'>Reading List</h1>
 	<table>
 		<td class="nav_menu">
-			<ul>
-			  <li><%= link_to 'Books', books_path %></li>
-			  <li><%= link_to 'Categories', categories_path %></li>
+			<ul>Menu
+			  <li>
+			  	<ul class="main_menu_item">Books
+			  	  <li><%= link_to 'List', books_path %></li>
+			      <li><%= link_to 'New book', new_book_path %></li>
+			    </ul>
+			  </li>
+			  <li>
+			    <ul class="main_menu_item">Categories
+			  	  <li><%= link_to 'List', categories_path %></li>
+			      <li><%= link_to 'New category', new_category_path %></li>
+			    </ul>
+			  </li>
 			</ul>
 		</td>
 		<td>
