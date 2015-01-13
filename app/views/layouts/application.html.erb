@@ -6,11 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 	<h1 align='center'>Reading List</h1>
-	<table>
-		<td class="nav_menu">
-			<ul>Menu
+    <div id="main-container" class="container">
+      <div class="row">
+        <div id="sidebar" class="col-xs-3">
+          <ul>Menu
 			  <li>
 			  	<ul class="main_menu_item">Books
 			  	  <li><%= link_to 'List', books_path %></li>
@@ -24,12 +26,12 @@
 			    </ul>
 			  </li>
 			</ul>
-		</td>
-		<td>
-		  <%= yield %>
-		</td>
-	</table>
-	<h6>Based on Code School's Ruby path screencasts</h6>
-
-</body>
+        </div>
+        <div id="content" class="col-xs-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <h6>Based on Code School's Ruby path screencasts</h6>
+  </body>
 </html>
