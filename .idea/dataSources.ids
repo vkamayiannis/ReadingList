@@ -3,4 +3,7 @@
   <data-source source="LOCAL" name="Rails ReadingList: development" uuid="2ab71ba2-15ae-4b47-a0ba-fcd30d127f32">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails ReadingList: test" uuid="5c44eeb5-7083-4304-b4e4-32a3b1304509">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

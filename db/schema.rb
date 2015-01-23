@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20150112181941) do
     t.string   "amazon_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "rating"
-    t.date     "finished_on"
-    t.integer  "category_id"
+    t.integer  "rating",      precision: 38, scale: 0
+    t.datetime "finished_on"
+    t.integer  "category_id", precision: 38, scale: 0
     t.text     "isbn"
   end
 
